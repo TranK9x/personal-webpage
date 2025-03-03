@@ -43,7 +43,7 @@
         body {
             background-image: url('background.jpg'); /* Path to your image */
             background-size:cover; /* Ensures the image covers the entire background */
-            background-position: center; /* Centers the image on the page */
+             background-position: center; /*Centers the image on the page */
             background-repeat: no-repeat;
             background-attachment: fixed;
         
