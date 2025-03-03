@@ -9,7 +9,9 @@
 }
 header .name,header .slogan{
     color: white;
-
+}
+header .gmail, header .phone{ 
+margin-bottom: 0;
 }
 #play-piano{
     margin-right: 1rem;
