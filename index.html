@@ -11,10 +11,6 @@
 
 </head>
 <body class="bg-light">
-    <audio id="audioPlayer" loop autoplay>
-        <source src="Music.mp3" type="audio/mp3">
-    </audio>
-    
     <div class="container text-center my-5">
         <!-- Profile Header -->
         <header>
@@ -47,34 +43,25 @@
                     <span>Instagram</span>
                 </div>
             </a>
-            <button id="play-button" type="button" class="btn btn-success music-button" onclick="toggleAudio()">Turn on music</button>
+            <button id="play-piano" type="button" class="btn btn-success music-button" onclick="toggleAudio1()">Turn on music</button>
+            <button id="play-rain" type="button" class="btn btn-success music-button" onclick="toggleAudio2()">Turn on rain sound</button>
 
             <!-- Add more links as needed -->
              <!-- add a comment for fun -->
         </section>
     </div>
+    <audio id="audioPlayer1" loop>
+        <source src="Music.mp3" type="audio/mp3">
+    </audio>
+    <audio id="audioPlayer2" loop>
+        <source src="rain-sound.mp3" type="audio/mp3">
+    </audio>
 
     <!-- Bootstrap JS and dependencies -->
   
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <script>
-        var audio = document.getElementById('audioPlayer');  
-        // audio.play(); 
-        function toggleAudio() {
-            if (audio.paused) {
-                audio.play(); 
-                document.querySelector('button').textContent = 'Turn off music'; 
-                document.getElementById('play-button').classList.remove('btn-success');
-                document.getElementById('play-button').classList.add('btn-secondary');
-            } else {
-                audio.pause(); 
-                document.querySelector('button').textContent = 'Turn on music'; 
-                document.getElementById('play-button').classList.add('btn-success');
-                document.getElementById('play-button').classList.remove('btn-secondary');
-            }
-        }
-    </script>
+    <script src="mainJs.js"></script>
 </body>
 </html>
