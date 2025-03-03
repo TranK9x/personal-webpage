@@ -2,51 +2,46 @@ var audio1 = document.getElementById('audioPlayer1');
 var audio2 = document.getElementById('audioPlayer2');
 var pianoButton=document.getElementById('play-piano');
 var rainButton=document.getElementById('play-rain');
+
+function turnOffButton(button, text){
+    button.textContent = text;
+    button.classList.add('btn-success');
+    button.classList.remove('btn-secondary');
+}
+function turnOnButton(button, text){   
+    button.textContent = text;
+    button.classList.remove('btn-success');
+    button.classList.add('btn-secondary');
+}
 function toggleAudio1() {
     if(!audio2.paused){
         audio2.pause(); //turn off the music 2
-        rainButton.textContent = 'Turn on rain sound'; 
-        rainButton.classList.add('btn-success');
-        rainButton.classList.remove('btn-secondary');
+        //change the status of button 2
+        turnOffButton(rainButton, 'Turn on rain sound');
     }
     if (audio1.paused) {
         audio1.play(); 
-        pianoButton.textContent = 'Turn off piano'; 
-        pianoButton.classList.remove('btn-success');
-        pianoButton.classList.add('btn-secondary');
-        
+        turnOnButton(pianoButton, 'Turn off piano');
     } else {
         audio1.pause(); 
-        pianoButton.textContent = 'Turn on piano'; 
-        pianoButton.classList.toggle('btn-success');
-        pianoButton.classList.add('btn-secondary');
+        turnOffButton(pianoButton, 'Turn on piano');
     }
 }
-
 
 function toggleAudio2() {
     
     if(!audio1.paused){
         audio1.pause();//turn off the music 1
-        rainButton.textContent = 'Turn on rain sound'; 
-        rainButton.classList.add('btn-success');
-        rainButton.classList.remove('btn-secondary');
+        turnOffButton(pianoButton, 'Turn on piano');
     }
     if (audio2.paused) {   
         //play rain sound
         audio2.play(); 
-        rainButton.textContent = 'Turn off rain sound'; 
-        rainButton.classList.remove('btn-success');
-        rainButton.classList.add('btn-secondary');
-
-        pianoButton.textContent = 'Turn on piano'; 
-        pianoButton.classList.add('btn-success');
-        pianoButton.classList.remove('btn-secondary');
+        turnOnButton(rainButton, 'Turn off rain sound');
+        turnOffButton(pianoButton, 'Turn on piano');
     } else {
         audio2.pause(); 
-        rainButton.textContent = 'Turn on rain sound'; 
-        rainButton.classList.add('btn-success');
-        rainButton.classList.remove('btn-secondary');
+        turnOffButton(rainButton, 'Turn on rain sound');
     }
 }
 

@@ -45,17 +45,25 @@ div section .link-item:hover {
 body {
     background-image: url('background.jpg'); /* Path to your image */
     background-size:cover; /* Ensures the image covers the entire background */
-        background-position: center; /*Centers the image on the page */
+    background-position: center; /* Centers the image on the page */
     background-repeat: no-repeat;
     background-attachment: fixed;
 
 }
 
-@media (min-width: 768px) {
-    .container, .container-md, .container-sm {
-        max-width: 45%;
+
+@media (min-width: 1000px) {
+    .container {
+        max-width: 50%;
     }
-    body {
-        background-position: unset; 
+}
+@media (min-width: 700px) {
+    .container {
+        max-width: 70%;
+    }
+}
+@media (min-width: 250px) {
+    .container {
+        max-width: 90%;
     }
 }
