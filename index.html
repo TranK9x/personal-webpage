@@ -11,10 +11,10 @@
 
 </head>
 <body class="bg-light">
-    <audio id="audioPlayer" autoplay loop>
+    <audio id="audioPlayer" loop autoplay>
         <source src="Music.mp3" type="audio/mp3">
     </audio>
-
+    
     <div class="container text-center my-5">
         <!-- Profile Header -->
         <header>
@@ -46,19 +46,20 @@
                     <span>Instagram</span>
                 </div>
             </a>
-            <button id="play-button" type="button" class="btn btn-secondary music-button" onclick="toggleAudio()">Turn off music</button>
+            <button id="play-button" type="button" class="btn btn-success music-button" onclick="toggleAudio()">Turn on music</button>
 
             <!-- Add more links as needed -->
         </section>
     </div>
 
     <!-- Bootstrap JS and dependencies -->
+  
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script>
         var audio = document.getElementById('audioPlayer');  
-        
+        // audio.play(); 
         function toggleAudio() {
             if (audio.paused) {
                 audio.play(); 
