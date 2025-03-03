@@ -7,14 +7,11 @@
             object-fit: cover;
             margin-bottom: 20px;
         }
-        header .name{
+        header .name,header .slogan{
             color: white;
 
         }
-        header .slogan{
-            color : white ;
-
-        }
+        
         .link-item {
             background-color: #0077b5;
             color: white;
@@ -27,7 +24,7 @@
             transition: transform 0.2s ease-in-out;
         }
        
-        .phone{
+        .phone, .gmail{
             color: white;
             size: 16px;
         }
@@ -47,6 +44,7 @@
             background-image: url('background.jpg'); /* Path to your image */
             background-size:cover; /* Ensures the image covers the entire background */
             background-position: center; /* Centers the image on the page */
-            /* background-repeat: no-repeat; */
+            background-repeat: no-repeat;
+            background-attachment: fixed;
         
         }
