@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Portfolio</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body class="bg-light">
+    <audio id="audioPlayer" autoplay loop>
+        <source src="Music.mp3" type="audio/mp3">
+    </audio>
+
+    <div class="container text-center my-5">
+        <!-- Profile Header -->
+        <header>
+            <img src="images.jpeg" alt="Your Avatar" class="avatar">
+            <h1 class="name">Kien Pro</h1>
+            <p class="phone">Phone: 224-435-7133</p>
+            <p class="slogan">No Pain No Gain</p>
+        </header>
+
+        <!-- Links Section -->
+        <section class="my-4">
+            <a href="https://www.facebook.com/vongkientran/" class="d-block my-3" target="_blank">
+                <div class="link-item">
+                    <img src="facebook_icon.png" alt="facebook" />
+                    <span>Facebook</span>
+                </div>
+            </a>
+
+            <a href="https://discordapp.com/users/807514059506712576" class="d-block my-3" target="_blank">
+                <div class="link-item">
+                    <img src="dis.png" alt="Discord" />
+                    <span>Discord  </span>
+                </div>
+            </a>
+
+            <a href="https://www.instagram.com/kien.t14/" class="d-block my-3" target="_blank">
+                <div class="link-item">
+                    <img src="insta.png" alt="Instagram" />
+                    <span>Instagram</span>
+                </div>
+            </a>
+            <button id="play-button" type="button" class="btn btn-secondary music-button" onclick="toggleAudio()">Turn off music</button>
+
+            <!-- Add more links as needed -->
+        </section>
+    </div>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        var audio = document.getElementById('audioPlayer');  
+        
+        function toggleAudio() {
+            if (audio.paused) {
+                audio.play(); 
+                document.querySelector('button').textContent = 'Turn off music'; 
+                document.getElementById('play-button').classList.remove('btn-success');
+                document.getElementById('play-button').classList.add('btn-secondary');
+            } else {
+                audio.pause(); 
+                document.querySelector('button').textContent = 'Turn on music'; 
+                document.getElementById('play-button').classList.add('btn-success');
+                document.getElementById('play-button').classList.remove('btn-secondary');
+            }
+        }
+    </script>
+</body>
+</html>
