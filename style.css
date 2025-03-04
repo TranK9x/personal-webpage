@@ -1,5 +1,4 @@
 
-/* Custom styles */
 .avatar {
     width: 120px;
     height: 120px;
@@ -46,7 +45,7 @@ div section .link-item:hover {
 
 body {
     background-image: url('images/background.jpg'); /* Path to your image */
-    background-size:cover; /* Ensures the image covers the entire background */
+    background-size:cover; 
     background-position: center; /* Centers the image on the page */
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -57,7 +56,7 @@ body {
 @media (min-width: 1000px) {
     .container {
         max-width: 50%!important;
-    }
+    } 
 }
 @media (min-width: 700px) {
     .container {
