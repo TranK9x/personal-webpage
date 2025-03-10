@@ -44,4 +44,15 @@ function toggleAudio2() {
         turnOffButton(rainButton, 'Turn on rain sound');
     }
 }
-
+var bg_num=2;
+function changeBackground() {
+    var body = document.body;
+    console.log(body.style.backgroundImage.url);
+    if(bg_num==2){
+        body.style.backgroundImage = "url('images/Black_Wallpaper.jpg')";        bg_num=1;}
+        else{
+            body.style.backgroundImage = "url('images/background.jpg')";            bg_num=2;
+        }
+    
+        
+}

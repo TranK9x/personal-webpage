@@ -51,7 +51,46 @@ body {
     background-attachment: fixed;
 
 }
-
+body .bg-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+body .bg-box span{
+    margin-right: 1rem;
+    color: white;
+}
+.check-bg-button{
+    background-color: #d2d2d2;
+    width: 4rem;
+    height: 2rem;
+    left: 0;
+    border-radius:2rem ;
+    cursor: pointer;
+    margin-bottom: 0;
+    position: relative;
+}
+.check-bg-button::before{
+    content: '';
+    left: 0;
+    position: absolute;
+    width: 1.6rem;
+    height: 1.6rem;
+    background-color: white;
+    border-radius: 50%;
+    transition: 0.5s;
+    margin: 0.2rem;
+}
+input:checked + .check-bg-button{
+    background-color: #0077b5;
+}
+input:checked + .check-bg-button::before{
+    transform: translateX(1.8rem);
+}
+#bg-button{
+    display: none;
+}
 
 @media (min-width: 1000px) {
     .container {
